@@ -4,9 +4,9 @@
     - R (+x +y +z) (+x/y/z +<number>)
 
 - Viewing angles (preferences > input > emulate numpad):
-    - y view: 1
-    - x view: 3
-    - z view: 7
+    - y view (front orthographic): 1
+    - x view (right orthographic): 3
+    - z view (top orthographic): 7
     - camera view: 0
     - set camera view: opt+cmd+0
     - adjust camera view (chickenhead): shift+`
