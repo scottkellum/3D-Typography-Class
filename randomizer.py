@@ -1,7 +1,7 @@
 from coldtype import *
 from random import Random
 
-names = ["bert", "anna rose", "zeh", "zack", "scott", "seth", "adam", "wendrich", "stephen", "jennifer", "kirstin", "benjamin", "alec"]
+names = ["bert", "anna rose", "zeh", "zak", "scott", "seth", "adam", "wendrich", "stephen", "jennifer", "kirstin", "benjamin", "alec"]
 
 rndm = Random()
 rndm.seed(1)
