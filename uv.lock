@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "coldtype", extras = ["viewer", "website"], specifier = ">=0.12.2" }]
+requires-dist = [{ name = "coldtype", extras = ["viewer", "website"], editable = "../../coldtype" }]
 
 [[package]]
 name = "b3denv"
@@ -294,7 +294,7 @@ wheels = [
 [[package]]
 name = "coldtype"
 version = "0.12.3"
-source = { registry = "https://pypi.org/simple" }
+source = { editable = "../../coldtype" }
 dependencies = [
     { name = "b3denv" },
     { name = "coldtype-fontgoggles" },
@@ -305,10 +305,6 @@ dependencies = [
     { name = "show-in-file-manager" },
     { name = "skia-pathops" },
     { name = "uharfbuzz" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/df/52/ef3b4e397d4d095ce2456fea6d93a145c998c2ab6557b99128c2aba0ffc8/coldtype-0.12.3.tar.gz", hash = "sha256:d506060ae52e82c36d7d0d2e45114e0eb7f2484df9d948989d3d0c9b54474a03", size = 8343996 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/4f/c8/72ba0b05b4b92f4660ecfdbeedc18dc3670d42d43f44299e444bbaa41751/coldtype-0.12.3-py3-none-any.whl", hash = "sha256:0d428ef5f1d9964d5fccd026a01bb8254688f51b1871df28d9dc9ef4ab5e70a7", size = 642735 },
 ]
 
 [package.optional-dependencies]
@@ -337,6 +333,73 @@ website = [
     { name = "python-frontmatter" },
     { name = "sourcetypes" },
     { name = "tornado" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "b3denv", specifier = ">=0.0.22" },
+    { name = "beautifulsoup4", marker = "extra == 'website'" },
+    { name = "brotli", marker = "extra == 'website'", specifier = ">=1.2.0" },
+    { name = "coldtype-fontgoggles", specifier = "==1.8.4.7" },
+    { name = "coldtype-fontgoggles", extras = ["more-fonts"], marker = "extra == 'more-fonts'", specifier = "==1.8.4.7" },
+    { name = "coldtype-fontgoggles", extras = ["more-fonts"], marker = "extra == 'viewer'", specifier = "==1.8.4.7" },
+    { name = "defcon", specifier = ">=0.12.0" },
+    { name = "easing-functions", specifier = "==1.0.4" },
+    { name = "favicons", marker = "extra == 'website'" },
+    { name = "fontpens", specifier = "==0.2.4" },
+    { name = "fonttools", specifier = ">=4.60.2" },
+    { name = "glfw", marker = "extra == 'viewer'" },
+    { name = "jinja2", marker = "extra == 'website'", specifier = ">=3.1.6" },
+    { name = "livereload", marker = "extra == 'website'" },
+    { name = "lxml", marker = "extra == 'website'" },
+    { name = "markdown", marker = "extra == 'website'", specifier = ">=3.8.1" },
+    { name = "markdown-captions", marker = "extra == 'website'" },
+    { name = "mido", marker = "extra == 'viewer'" },
+    { name = "numpy", marker = "extra == 'drawbot'" },
+    { name = "numpy", marker = "extra == 'viewer'" },
+    { name = "potracer", marker = "extra == 'notebook'" },
+    { name = "potracer", marker = "extra == 'viewer'" },
+    { name = "pyaudio", marker = "extra == 'audio'" },
+    { name = "pygments", marker = "extra == 'website'" },
+    { name = "pyopengl", marker = "extra == 'viewer'" },
+    { name = "python-frontmatter", marker = "extra == 'website'" },
+    { name = "requests", marker = "extra == 'viewer'", specifier = ">=2.32.4" },
+    { name = "show-in-file-manager", specifier = ">=1.1.6" },
+    { name = "skia-pathops" },
+    { name = "skia-pathops", marker = "extra == 'notebook'" },
+    { name = "skia-pathops", marker = "extra == 'viewer'" },
+    { name = "skia-python", marker = "extra == 'notebook'" },
+    { name = "skia-python", marker = "extra == 'viewer'" },
+    { name = "soundfile", marker = "extra == 'audio'" },
+    { name = "sourcetypes", marker = "extra == 'website'" },
+    { name = "tdqm", marker = "extra == 'notebook'" },
+    { name = "tornado", marker = "extra == 'website'", specifier = ">=6.5.5" },
+    { name = "ufo2ft", marker = "extra == 'more-fonts'", specifier = ">=3.2.8" },
+    { name = "ufo2ft", marker = "extra == 'viewer'", specifier = ">=3.2.8" },
+    { name = "uharfbuzz", specifier = "<0.47.0" },
+    { name = "unicodedata2", marker = "extra == 'unicode'" },
+]
+provides-extras = ["more-fonts", "viewer", "drawbot", "unicode", "notebook", "audio", "website"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "drawbot", git = "https://github.com/typemytype/drawbot" },
+    { name = "fontmake" },
+    { name = "imagehash" },
+    { name = "ipykernel" },
+    { name = "mdx-linkify" },
+    { name = "measurement" },
+    { name = "noise" },
+    { name = "numpy", specifier = "<2.2" },
+    { name = "opentype-feature-freezer" },
+    { name = "pillow" },
+    { name = "pyaudio" },
+    { name = "pygments" },
+    { name = "pymunk" },
+    { name = "pynput" },
+    { name = "pytest", specifier = ">=8.3.5" },
+    { name = "scikit-image" },
+    { name = "soundfile" },
 ]
 
 [[package]]

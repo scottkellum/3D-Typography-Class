@@ -7,3 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "coldtype[viewer,website]>=0.12.2",
 ]
+
+[tool.uv.sources]
+coldtype = { path = "../../coldtype", editable = true }
