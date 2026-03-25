@@ -9,8 +9,13 @@ def prerun(bw:BpyWorld):
 def varfont2(f):
     return (P(
         Glyphwise("Gamay", lambda g:
-            Style('Gamay', 375
-                ,wdth=f.adj(-g.i*5).e("seio", 1, rng=(1, 0)), wght=f.adj(-g.i*5).e("seio", 1, rng=(1, 0))), multiline=1)
+            Style(
+                'Gamay',
+                375,
+                wdth=f.adj(-g.i*5).e("seio", 1, rng=(1, 0)),
+                wght=f.adj(-g.i*5).e("seio", 1, rng=(1, 0))),
+                multiline=1
+            )
             .xalign(f.a.r)
             .track(50, v=1)
             .align(f.a.r)
