@@ -3,10 +3,38 @@
 - https://www.blender.org/
 - https://docs.astral.sh/uv/getting-started/installation/
 
-## Prerequisites
+## Install
 
-- Install Homebrew dependencies for Python graphics:
-  - `brew install pkg-config cairo harfbuzz`
+```bash
+./install.sh
+```
+
+Requires [Homebrew](https://brew.sh). The script installs `uv` (if missing), system graphics dependencies, and syncs the Python environment.
+
+## Node Editor
+
+A visual node editor for composing ColdType scripts. Changes to the graph auto-save `cold-node.py`, which ColdType and Blender reload live.
+
+```bash
+uv run python node_editor.py
+```
+
+- **Right-click** the canvas to add nodes (Text, Font Style, Layout, Extrude, Output)
+- Connect nodes by dragging between ports
+- **Launch ColdType** / **Launch Blender** buttons in the toolbar start live preview
+- Your node graph is saved automatically and restored on next open
+
+## Run manually
+
+Launch the ColdType 2D preview:
+```bash
+uv run coldtype ./cold-node.py
+```
+
+Launch with Blender (3D):
+```bash
+uv run coldtype ./cold-node.py -p b3dlo
+```
 
 ## Setup
 
