@@ -6,3 +6,5 @@ presentation_videos*
 presentation_stills*
 _DownloadedFonts
 recordings
+*.pyc
+*.pyc
